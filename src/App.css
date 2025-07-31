@@ -1,0 +1,550 @@
+@media (max-width: 992px) {
+  .hero-text h1,
+  .about-text h2,
+  .products-header h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p,
+  .about-text p,
+  .products-header p {
+    font-size: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-slider {
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .logo img {
+    width: 70px;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: transparent;
+    color: white; /* ✅ Toggle icon white */
+    font-size: 1.5rem;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 0;
+    padding: 10px 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-btn,
+  .about-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .services-page {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .service-card {
+    margin: 0.5rem 0;
+  }
+}
+.menu-toggle i {
+  color: white !important;
+}
+@media (max-width: 320px) {
+  .hero-content h1,
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p,
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+.navbar-toggler {
+  border: none;
+  color: white; /* set to black if using white background */
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1); /* Makes the icon white */
+}
+
+
+/*  Navbar design   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 50px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 90px;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a,
+.nav-links a:focus,
+.nav-links a:active,
+.nav-links .nav-link.active {
+  text-decoration: none;
+  color: #ffcc00 !important;
+  font-weight: bold;
+  padding: 10px 12px;
+  display: block;
+  background: none;
+  border-radius: 4px;
+}
+
+.navbar .nav-link.active {
+  color: #ffcc00 !important;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+.NavDropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #000;
+  min-width: 200px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+.dropdown-menu {
+  background-color: #000 !important;
+}
+
+.dropdown-content li a {
+  padding: 10px 16px;
+  background-color: #000;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* hero section design  */
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/imgs/main_background.webp") no-repeat center center/cover;
+  filter: brightness(0.4);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background-color: #4ade80;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e6b800;
+}
+
+.hero-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1 1 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  padding: 12px 24px;
+  background-color: #2b6cb0;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.hero-slider {
+  flex: 1 1 40%;
+}
+
+.slider-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* aboutus design */
+
+.about {
+  padding: 80px 10%;
+  background-color: #f5f5f5;
+  color: #2c2c2c;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #1e3c72;
+  margin-bottom: 15px;
+}
+
+.about-text h3 {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #444;
+}
+
+.about-text p {
+  font-size: 16.5px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-list,
+.about-benefits {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.about-list li,
+.about-benefits li {
+  font-size: 16px;
+  padding: 6px 0;
+}
+
+.about-btn {
+  display: inline-block;
+  background-color: #1e3c72;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.about-btn:hover {
+  background-color: #2a5298;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+/* products design  */
+
+.center {
+  margin: 0 auto;
+  width: 90%;
+}
+.product-card {
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slick-prev,
+.slick-next {
+  display: block !important;
+  z-index: 2;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000000;
+  font-size: 30px;
+}
+
+.products {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.products-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1e3c72;
+  margin-bottom: 10px;
+}
+
+.products-header p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #f4f4f4;
+  padding: 25px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 15.5px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* services design  */
+
+.services-page {
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.service-card {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem;
+}
+.service-card h3 {
+  color: #333;
+}
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #004d99;
+}
